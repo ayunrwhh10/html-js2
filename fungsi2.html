@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator Sederhana</title>
+</head>
+<body>
+    <h2>Kalkulator Aritmatika</h2>
+
+    Angka pertama: <input type="number" id="angka1"><br><br>
+    Angka kedua: <input type="number" id="angka2"><br><br>
+
+    <button onclick="hitung()">Hitung</button>
+
+    <p id="output"></p>
+
+<script>
+    function hitung() {
+        let angka1 = Number(document.getElementById("angka1").value);
+        let angka2 = Number(document.getElementById("angka2").value);
+
+        let tambah = angka1 + angka2;
+        let kurang = angka1 - angka2;
+        let kali = angka1 * angka2;
+        let bagi = angka1 / angka2;
+
+        let hasil =
+            "Hasil Penjumlahan: " + tambah + "<br>" +
+            "Hasil Pengurangan: " + kurang + "<br>" +
+            "Hasil Perkalian: " + kali + "<br>" +
+            "Hasil Pembagian: " + bagi;
+
+        document.getElementById("output").innerHTML = hasil;
+    }
+</script>
+
+</body>
+</html>
